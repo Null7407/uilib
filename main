@@ -686,7 +686,6 @@ function library:Introduction()
     local barCorner = Instance.new("UICorner")
     local barLayout = Instance.new("UIListLayout")
     local NullLogo = Instance.new("ImageLabel")
-    local hashLogo = Instance.new("ImageLabel")
     local Null = Instance.new("TextLabel")
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
@@ -755,17 +754,6 @@ function library:Introduction()
     NullLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
     NullLogo.ImageTransparency = 1
     
-    hashLogo.Name = "hashLogo"
-    hashLogo.Parent = background
-    hashLogo.AnchorPoint = Vector2.new(0.5, 0.5)
-    hashLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    hashLogo.BackgroundTransparency = 1.000
-    hashLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
-    hashLogo.Size = UDim2.new(0, 150, 0, 150)
-    hashLogo.Visible = true
-    hashLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
-    hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
-    
     Null.Name = "Null"
     Null.Parent = background
     Null.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -816,10 +804,6 @@ function library:Introduction()
     TweenService:Create(NullLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
     wait(2)
     TweenService:Create(NullLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
-    wait(.2)
-    TweenService:Create(hashLogo, TweenTable["introduction"], {ImageTransparency = 0}):Play()
-    wait(2)
-    TweenService:Create(hashLogo, TweenTable["introduction"], {ImageTransparency = 1}):Play()
     wait(.1)
     TweenService:Create(text, TweenTable["introduction"], {TextTransparency = 1}):Play()
     wait(.1)
